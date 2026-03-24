@@ -23,6 +23,7 @@ Use this when you want a repeatable terminal-driven flow for:
 ## Repository Layout
 
 ```text
+install.sh
 wechat-devtools-automation/
   SKILL.md
   references/
@@ -36,7 +37,13 @@ wechat-devtools-automation/
 ## Install Into Codex
 
 ```bash
-cp -R wechat-devtools-automation ~/.codex/skills/
+./install.sh
+```
+
+Or install into a custom Codex home:
+
+```bash
+CODEX_HOME=/path/to/codex-home ./install.sh
 ```
 
 ## Requirements
@@ -94,7 +101,7 @@ You still need to add your own guarded diagnostics page and cloud-side auth chec
 After cloning this repository on another machine:
 
 ```bash
-cp -R wechat-devtools-automation ~/.codex/skills/
+./install.sh
 ```
 
 Then reference the skill by name in Codex when working on a WeChat Mini Program project.
