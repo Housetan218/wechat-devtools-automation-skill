@@ -8,6 +8,7 @@ Reusable Codex skill for repeatable WeChat Mini Program workflows in WeChat DevT
 - a bootstrap script that adds a project-local automation skeleton
 - a validation script that checks the generated skeleton
 - reference documents for the expected project contract
+- minimal GitHub collaboration templates for safe public maintenance
 
 ## Good Fit
 
@@ -105,6 +106,15 @@ After cloning this repository on another machine:
 ```
 
 Then reference the skill by name in Codex when working on a WeChat Mini Program project.
+
+## Collaboration Files
+
+This repository includes:
+
+- issue templates for bugs and feature requests
+- a pull request template with required verification steps
+- `CONTRIBUTING.md` for contribution rules
+- `SECURITY.md` for private vulnerability reporting guidance
 
 ## Tested Scope
 
