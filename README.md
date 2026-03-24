@@ -2,6 +2,37 @@
 
 Reusable Codex skill for repeatable WeChat Mini Program workflows in WeChat DevTools.
 
+## Quick Start
+
+```bash
+git clone https://github.com/Housetan218/wechat-devtools-automation-skill.git
+cd wechat-devtools-automation-skill
+./install.sh
+```
+
+Then use the installed skill in Codex when working on a WeChat Mini Program project.
+
+## Typical Workflow
+
+```bash
+python3 wechat-devtools-automation/scripts/bootstrap_wechat_devtools_automation.py \
+  --project-dir /path/to/existing-miniapp \
+  --env-id your-env-id \
+  --functions login,autoTest,auditGameRecords
+
+python3 wechat-devtools-automation/scripts/validate_bootstrap.py \
+  --project-dir /path/to/existing-miniapp
+```
+
+Typical result:
+
+```text
+[bootstrap] written: utils/devAutomationConfig.js
+[bootstrap] written: scripts/wechat-cli.sh
+[bootstrap] written: scripts/wechat-regression.sh
+[validate] bootstrap output looks consistent
+```
+
 ## What This Repo Ships
 
 - one installable skill folder: `wechat-devtools-automation/`
@@ -88,6 +119,14 @@ python3 wechat-devtools-automation/scripts/validate_bootstrap.py \
 
 Validation checks the generated files, compile mode wiring, placeholder resolution, and JavaScript syntax of the generated helpers.
 
+## Limitations
+
+- macOS-oriented workflow and helper scripts
+- requires a real existing Mini Program project, not an empty directory
+- does not generate your business pages or cloud functions
+- still depends on WeChat DevTools behavior and local GUI permissions
+- diagnostics or admin routes in target projects still need cloud-side auth checks
+
 ## What It Intentionally Does Not Include
 
 - Mini Program business pages
@@ -115,6 +154,14 @@ This repository includes:
 - a pull request template with required verification steps
 - `CONTRIBUTING.md` for contribution rules
 - `SECURITY.md` for private vulnerability reporting guidance
+
+## Suggested GitHub Topics
+
+- `codex-skill`
+- `wechat-mini-program`
+- `wechat-devtools`
+- `automation`
+- `miniapp`
 
 ## Tested Scope
 
